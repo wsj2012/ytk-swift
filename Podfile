@@ -6,5 +6,4 @@ workspace 'ytk-swift.xcworkspace'
 
 target 'ytk-swift' do
     pod 'Alamofire'
-    pod 'Toast-Swift'
 end

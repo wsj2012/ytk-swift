@@ -8,7 +8,6 @@
 
 import UIKit
 import Alamofire
-import Toast_Swift
 
 class YTKNetworkAgent: NSObject {
     // 单例
@@ -137,17 +136,17 @@ class YTKNetworkAgent: NSObject {
     
     private func handlerRequest(_ request: Request, responseData: DataResponse<Data>) {
         
-        let rootVC = UIApplication.shared.delegate as! AppDelegate
+        let window = UIApplication.shared.keyWindow
         if (responseData.error != nil) {
             //处理异常
 //            ZVProgressHUD.showError(with: "网络请求异常")
-            rootVC.window?.makeToast("网络请求异常")
+            window?.rootViewController?.view.makeToast("网络请求异常")
             return
         }
         //验证数据准确性
         if responseData.response == nil {
 //            HYBProgressHUD.show(status: "请求返回数据为空")
-            rootVC.window?.makeToast("请求返回数据为空")
+            window?.rootViewController?.view.makeToast("请求返回数据为空")
             return
         }
         

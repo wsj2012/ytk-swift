@@ -20,6 +20,7 @@
 		A22D61F6219D4DA30074EA60 /* YTKRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22D61F1219D4DA30074EA60 /* YTKRequest.swift */; };
 		A22D61F7219D4DA30074EA60 /* YTKNetworkAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22D61F2219D4DA30074EA60 /* YTKNetworkAgent.swift */; };
 		A22D61F9219D4EE50074EA60 /* GetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22D61F8219D4EE50074EA60 /* GetRequest.swift */; };
+		A22D6201219D68C90074EA60 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22D6200219D68C80074EA60 /* Toast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		A22D61F1219D4DA30074EA60 /* YTKRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YTKRequest.swift; sourceTree = "<group>"; };
 		A22D61F2219D4DA30074EA60 /* YTKNetworkAgent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YTKNetworkAgent.swift; sourceTree = "<group>"; };
 		A22D61F8219D4EE50074EA60 /* GetRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRequest.swift; sourceTree = "<group>"; };
+		A22D6200219D68C80074EA60 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 		BE9A43A4836648BEAB34D440 /* libPods-ytk-swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ytk-swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -97,6 +99,7 @@
 				A22D61CE219D4AB00074EA60 /* AppDelegate.swift */,
 				A22D61D0219D4AB00074EA60 /* ViewController.swift */,
 				A22D61F8219D4EE50074EA60 /* GetRequest.swift */,
+				A22D6200219D68C80074EA60 /* Toast.swift */,
 				A22D61D2219D4AB00074EA60 /* Main.storyboard */,
 				A22D61D5219D4AB40074EA60 /* Assets.xcassets */,
 				A22D61D7219D4AB40074EA60 /* LaunchScreen.storyboard */,
@@ -226,6 +229,7 @@
 				A22D61F9219D4EE50074EA60 /* GetRequest.swift in Sources */,
 				A22D61F6219D4DA30074EA60 /* YTKRequest.swift in Sources */,
 				A22D61F7219D4DA30074EA60 /* YTKNetworkAgent.swift in Sources */,
+				A22D6201219D68C90074EA60 /* Toast.swift in Sources */,
 				A22D61CF219D4AB00074EA60 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
