@@ -136,17 +136,20 @@ class YTKNetworkAgent: NSObject {
     
     private func handlerRequest(_ request: Request, responseData: DataResponse<Data>) {
         
-        let window = UIApplication.shared.keyWindow
+//        let window = UIApplication.shared.keyWindow
+        
+        let baseRequest: YTKBaseRequest = self.queryRequest(request)!
+
         if (responseData.error != nil) {
             //处理异常
 //            ZVProgressHUD.showError(with: "网络请求异常")
-            window?.rootViewController?.view.makeToast("网络请求异常")
+            baseRequest.failureCompletionBlock!(baseRequest)
             return
         }
         //验证数据准确性
         if responseData.response == nil {
 //            HYBProgressHUD.show(status: "请求返回数据为空")
-            window?.rootViewController?.view.makeToast("请求返回数据为空")
+            baseRequest.failureCompletionBlock!(baseRequest)
             return
         }
         
