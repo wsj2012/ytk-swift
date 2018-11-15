@@ -33,7 +33,7 @@
 		A22D61D5219D4AB40074EA60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A22D61D8219D4AB40074EA60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A22D61DA219D4AB40074EA60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A22D61E3219D4BCC0074EA60 /* ytk-swift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = "ytk-swift.podspec"; sourceTree = SOURCE_ROOT; };
+		A22D61E3219D4BCC0074EA60 /* ytk-swift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; name = "ytk-swift.podspec"; path = "ytk-swift/ytk-swift.podspec"; sourceTree = SOURCE_ROOT; };
 		A22D61EE219D4DA30074EA60 /* YTKBaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YTKBaseRequest.swift; sourceTree = "<group>"; };
 		A22D61EF219D4DA30074EA60 /* YTKNetworkConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YTKNetworkConfig.swift; sourceTree = "<group>"; };
 		A22D61F0219D4DA30074EA60 /* YTKNetworkPrivate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YTKNetworkPrivate.swift; sourceTree = "<group>"; };
@@ -94,8 +94,8 @@
 		A22D61CD219D4AB00074EA60 /* ytk-swift */ = {
 			isa = PBXGroup;
 			children = (
+				A22D6202219D78270074EA60 /* Supporting Files */,
 				A22D61ED219D4DA30074EA60 /* YTKNetwork-Swift */,
-				A22D61E2219D4B2E0074EA60 /* Supporting Files */,
 				A22D61CE219D4AB00074EA60 /* AppDelegate.swift */,
 				A22D61D0219D4AB00074EA60 /* ViewController.swift */,
 				A22D61F8219D4EE50074EA60 /* GetRequest.swift */,
@@ -106,14 +106,6 @@
 				A22D61DA219D4AB40074EA60 /* Info.plist */,
 			);
 			path = "ytk-swift";
-			sourceTree = "<group>";
-		};
-		A22D61E2219D4B2E0074EA60 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A22D61E3219D4BCC0074EA60 /* ytk-swift.podspec */,
-			);
-			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		A22D61ED219D4DA30074EA60 /* YTKNetwork-Swift */ = {
@@ -127,6 +119,14 @@
 			);
 			path = "YTKNetwork-Swift";
 			sourceTree = SOURCE_ROOT;
+		};
+		A22D6202219D78270074EA60 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A22D61E3219D4BCC0074EA60 /* ytk-swift.podspec */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
