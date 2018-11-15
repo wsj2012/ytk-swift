@@ -1,0 +1,6 @@
+module Pods_ytk_swift {
+  umbrella header "Pods-ytk-swift-umbrella.h"
+
+  export *
+  module * { export * }
+}
