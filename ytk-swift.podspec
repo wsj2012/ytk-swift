@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "ytk-swift"
-s.version      = "1.0.6"
+s.version      = "1.0.7"
 s.summary      = "swfit版本ytknetwork，结合Alamofire使用，实现网络请求。"
 s.homepage     = "https://github.com/wsj2012/ytk-swift"
 s.license      = "MIT"

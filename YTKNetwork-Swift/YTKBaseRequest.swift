@@ -10,7 +10,7 @@ import UIKit
 
 typealias YTKRequestCompletionBlock = (YTKBaseRequest) -> ()
 
-class YTKBaseRequest: NSObject {
+open class YTKBaseRequest: NSObject {
     
     enum YTKRequestSerializerType: NSInteger {
         case HTTP = 0
@@ -23,7 +23,7 @@ class YTKBaseRequest: NSObject {
         case XMLParser
     }
     
-    enum YTKRequestMethod {
+    public enum YTKRequestMethod {
         case GET
         case POST
         case HEAD
@@ -41,56 +41,56 @@ class YTKBaseRequest: NSObject {
     
     var requestTask: URLSessionTask?
     
-    var currentRequest: URLRequest{
+    public var currentRequest: URLRequest{
         get{
             return requestTask!.currentRequest!
         }
     }
-    var originalRequest: URLRequest{
+    public var originalRequest: URLRequest{
         get{
             return requestTask!.originalRequest!
         }
     }
     
     fileprivate var _response: HTTPURLResponse?
-    var response: HTTPURLResponse {
+    public var response: HTTPURLResponse {
         get{
             return _response!
         }
     }
     fileprivate var _responseData: Data?
-    var responseData: Data {
+    public var responseData: Data {
         get{
             return _responseData!
         }
     }
     
     fileprivate var _responseString: String?
-    var responseString: String {
+    public var responseString: String {
         get{
             return _responseString!
         }
     }
     
     fileprivate var _responseObject: AnyObject?
-    var responseObject: AnyObject{
+    public var responseObject: AnyObject{
         get{
             return _responseObject!
         }
     }
     
     fileprivate var _error: NSError?
-    var error: NSError{
+    public var error: NSError{
         get{
             return _error!
         }
     }
     
-    var successCompletionBlock: YTKRequestCompletionBlock?
-    var failureCompletionBlock: YTKRequestCompletionBlock?
+    var successCompletionBlock: ((YTKBaseRequest) -> ())?
+    var failureCompletionBlock: ((YTKBaseRequest) -> ())?
     
     /************************************************************************/
-    var ignoreCache: Bool {
+    open var ignoreCache: Bool {
         get {
             return true
         }
@@ -98,7 +98,7 @@ class YTKBaseRequest: NSObject {
     
     /************************************************************************/
     
-    override init() {
+    public override init() {
         successCompletionBlock = {_ in }
         failureCompletionBlock = {_ in }
         
@@ -129,7 +129,9 @@ class YTKBaseRequest: NSObject {
         
     }
     
-    func startWithCompletionBlockWithSuccess(success: @escaping YTKRequestCompletionBlock, failure: @escaping YTKRequestCompletionBlock)  -> Void {
+    public func startWithCompletionBlockWithSuccess(success: @escaping (YTKBaseRequest) -> (),
+                                                    failure: @escaping (YTKBaseRequest) -> ())
+    {
         
         self.successCompletionBlock = success
         self.failureCompletionBlock = failure
@@ -138,7 +140,7 @@ class YTKBaseRequest: NSObject {
         
     }
     
-    func loadCacheWithSuccess(success: @escaping YTKRequestCompletionBlock) {
+    public func loadCacheWithSuccess(success: @escaping (YTKBaseRequest) -> ()) {
         self.successCompletionBlock = success
         self.loadCache()
     }
@@ -155,21 +157,21 @@ class YTKBaseRequest: NSObject {
     //MARK: - 子类复写方法
     
     ///  The URL path of request. This should only contain the path part of URL, e.g., /v1/user. See alse `baseUrl`.
-    func requestUrl() -> String {
+    open func requestUrl() -> String {
         return ""
     }
     
     ///  Optional CDN URL for request.
-    func cndUrl() -> String {
+    open func cndUrl() -> String {
         return ""
     }
     ///  Requset timeout interval. Default is 60s.
     
-    func requestTimeoutInterval() -> TimeInterval {
+    open func requestTimeoutInterval() -> TimeInterval {
         return 60
     }
     
-    func requestArgument() -> [String :Any]? {
+    open func requestArgument() -> [String :Any]? {
         return nil
     }
     
@@ -177,7 +179,7 @@ class YTKBaseRequest: NSObject {
         return argument
     }
     
-    func requestMethod() -> YTKRequestMethod {
+    open func requestMethod() -> YTKRequestMethod {
         return YTKRequestMethod.GET
     }
     

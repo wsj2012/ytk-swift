@@ -72,7 +72,7 @@ class YTKCacheMetadata:NSObject, NSSecureCoding {
     
 }
 
-class YTKRequest: YTKBaseRequest {
+open class YTKRequest: YTKBaseRequest {
     
     var cacheData: Data?
     var cacheString: String?
