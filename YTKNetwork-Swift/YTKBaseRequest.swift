@@ -117,7 +117,7 @@ class YTKBaseRequest: NSObject {
     }
     
     func start() {
-        //通知外部请求即将开始喽
+        //通知外部请求即将开始
         YTKNetworkAgent.sharedAgent.add(request: self)
     }
     

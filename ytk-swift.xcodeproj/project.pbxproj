@@ -13,7 +13,6 @@
 		A22D61D4219D4AB00074EA60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A22D61D2219D4AB00074EA60 /* Main.storyboard */; };
 		A22D61D6219D4AB40074EA60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A22D61D5219D4AB40074EA60 /* Assets.xcassets */; };
 		A22D61D9219D4AB40074EA60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A22D61D7219D4AB40074EA60 /* LaunchScreen.storyboard */; };
-		A22D61E4219D4BCC0074EA60 /* ytk-swift.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A22D61E3219D4BCC0074EA60 /* ytk-swift.podspec */; };
 		A22D61F3219D4DA30074EA60 /* YTKBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22D61EE219D4DA30074EA60 /* YTKBaseRequest.swift */; };
 		A22D61F4219D4DA30074EA60 /* YTKNetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22D61EF219D4DA30074EA60 /* YTKNetworkConfig.swift */; };
 		A22D61F5219D4DA30074EA60 /* YTKNetworkPrivate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22D61F0219D4DA30074EA60 /* YTKNetworkPrivate.swift */; };
@@ -21,6 +20,7 @@
 		A22D61F7219D4DA30074EA60 /* YTKNetworkAgent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22D61F2219D4DA30074EA60 /* YTKNetworkAgent.swift */; };
 		A22D61F9219D4EE50074EA60 /* GetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22D61F8219D4EE50074EA60 /* GetRequest.swift */; };
 		A22D6201219D68C90074EA60 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22D6200219D68C80074EA60 /* Toast.swift */; };
+		A22D6204219D79CA0074EA60 /* ytk-swift.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A22D6203219D79CA0074EA60 /* ytk-swift.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,6 @@
 		A22D61D5219D4AB40074EA60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A22D61D8219D4AB40074EA60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A22D61DA219D4AB40074EA60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A22D61E3219D4BCC0074EA60 /* ytk-swift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; name = "ytk-swift.podspec"; path = "ytk-swift/ytk-swift.podspec"; sourceTree = SOURCE_ROOT; };
 		A22D61EE219D4DA30074EA60 /* YTKBaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YTKBaseRequest.swift; sourceTree = "<group>"; };
 		A22D61EF219D4DA30074EA60 /* YTKNetworkConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YTKNetworkConfig.swift; sourceTree = "<group>"; };
 		A22D61F0219D4DA30074EA60 /* YTKNetworkPrivate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YTKNetworkPrivate.swift; sourceTree = "<group>"; };
@@ -41,6 +40,7 @@
 		A22D61F2219D4DA30074EA60 /* YTKNetworkAgent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YTKNetworkAgent.swift; sourceTree = "<group>"; };
 		A22D61F8219D4EE50074EA60 /* GetRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRequest.swift; sourceTree = "<group>"; };
 		A22D6200219D68C80074EA60 /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		A22D6203219D79CA0074EA60 /* ytk-swift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = "ytk-swift.podspec"; sourceTree = SOURCE_ROOT; };
 		BE9A43A4836648BEAB34D440 /* libPods-ytk-swift.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ytk-swift.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -123,7 +123,7 @@
 		A22D6202219D78270074EA60 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A22D61E3219D4BCC0074EA60 /* ytk-swift.podspec */,
+				A22D6203219D79CA0074EA60 /* ytk-swift.podspec */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -189,8 +189,8 @@
 			files = (
 				A22D61D9219D4AB40074EA60 /* LaunchScreen.storyboard in Resources */,
 				A22D61D6219D4AB40074EA60 /* Assets.xcassets in Resources */,
+				A22D6204219D79CA0074EA60 /* ytk-swift.podspec in Resources */,
 				A22D61D4219D4AB00074EA60 /* Main.storyboard in Resources */,
-				A22D61E4219D4BCC0074EA60 /* ytk-swift.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

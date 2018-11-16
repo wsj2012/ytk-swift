@@ -169,6 +169,8 @@ class YTKNetworkAgent: NSObject {
                 
             } catch let error as NSError {
                 print("解析数据失败, \(error)")
+                baseRequest.failureCompletionBlock!(baseRequest)
+                return
             }
             
             //成功回调
