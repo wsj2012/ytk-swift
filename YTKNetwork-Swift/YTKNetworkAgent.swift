@@ -186,6 +186,5 @@ class YTKNetworkAgent: NSObject {
         DispatchQueue.main.async {
             request.successCompletionBlock!(request)
         }
-        
     }
 }

@@ -32,11 +32,9 @@ class ViewController: UIViewController {
     //network  demo
     @objc func loadData() {
         
-        self.view.makeToastActivity(.center)
+        view.makeToastActivity(.center)
         DispatchQueue.main.asyncAfter(deadline: .now()+2, execute:
             {
-                
-                
 //                let request: GetRequest = GetRequest()
 //                request.loadCacheWithSuccess(success: { (request) in
 //                    print("\(request.responseString)")
@@ -49,6 +47,7 @@ class ViewController: UIViewController {
                     self.view.hideToastActivity()
                 }) { (request) in
                     self.view.hideToastActivity()
+                    self.view.makeToast("网络异常或返回数据异常")
                 }
         })
 

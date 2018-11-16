@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 s.name         = "ytk-swift"
-s.version      = "1.0.2"
-s.summary      = "swfit版本ytknetwork，结合Alacdmofire使用，实现网络请求。"
+s.version      = "1.0.3"
+s.summary      = "swfit版本ytknetwork，结合Alamofire使用，实现网络请求。"
 s.homepage     = "https://github.com/wsj2012/ytk-swift"
 s.license      = "MIT"
 s.author       = { "wsj_2012" => "time_now@yeah.net" }
