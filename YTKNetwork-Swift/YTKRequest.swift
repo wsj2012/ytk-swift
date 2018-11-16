@@ -326,7 +326,7 @@ open class YTKRequest: YTKBaseRequest {
     
     
     //MARK: - Subclass Override
-    func cacheTimeInSeconds() -> Int? {
+    open func cacheTimeInSeconds() -> Int? {
         return -1
     }
     
