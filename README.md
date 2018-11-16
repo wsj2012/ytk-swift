@@ -1,15 +1,23 @@
 # ytk-swift
 ### ytknetwork of swift verion，Combined with Alarmofire usage，Implementing network requests
 
+## Setup Instructions
 
+To integrate ytk-swift into your Xcode project using CocoaPods, specify it in your Podfile:
+
+pod 'ytk-swift', and in your code add import ytk-swift.
+
+## Manually
+
+Just add YTKNetwork-Swift folder to your project.
 
 ## Basic Examples
 
-* pod 'ytk-swift'
-* Create new class extends from YTKRequest
+### 1、 Create a new class extends from YTKRequest
 
 ```
 import UIKit
+import ytk-swift
 
 class GetRequest: YTKRequest {
     
@@ -34,7 +42,7 @@ class GetRequest: YTKRequest {
 
 ```
 
-* Test
+### 2、test
 
 ```
 import UIKit
@@ -88,3 +96,7 @@ class ViewController: UIViewController {
 
 }
 ```
+
+## Compatibility
+
+Version 1.0.8 requires Swift 4.2 and Xcode 10.
