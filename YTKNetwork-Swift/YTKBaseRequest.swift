@@ -125,6 +125,10 @@ class YTKBaseRequest: NSObject {
         YTKNetworkAgent.sharedAgent.cancelAllRequests()
     }
     
+    func loadCache() {
+        
+    }
+    
     func startWithCompletionBlockWithSuccess(success: @escaping YTKRequestCompletionBlock, failure: @escaping YTKRequestCompletionBlock)  -> Void {
         
         self.successCompletionBlock = success
@@ -132,6 +136,11 @@ class YTKBaseRequest: NSObject {
         
         self.start()
         
+    }
+    
+    func loadCacheWithSuccess(success: @escaping YTKRequestCompletionBlock) {
+        self.successCompletionBlock = success
+        self.loadCache()
     }
     
     //MARK: Subclass Override

@@ -35,6 +35,14 @@ class ViewController: UIViewController {
         self.view.makeToastActivity(.center)
         DispatchQueue.main.asyncAfter(deadline: .now()+2, execute:
             {
+                
+                
+//                let request: GetRequest = GetRequest()
+//                request.loadCacheWithSuccess(success: { (request) in
+//                    print("\(request.responseString)")
+//                    self.view.hideToastActivity()
+//                })
+                
                 let request: GetRequest = GetRequest()
                 request.startWithCompletionBlockWithSuccess(success: { (request) in
                     print("\(request.responseString)")

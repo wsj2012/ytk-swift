@@ -101,12 +101,6 @@ class YTKRequest: YTKBaseRequest {
         
         dataFromCache = true
         
-        DispatchQueue.main.async {
-            let strongSelf: YTKRequest = self
-            if let block = strongSelf.successCompletionBlock {
-                block(strongSelf)
-            }
-        }
     }
     
     override func requestCompletePreprocessor() {
@@ -117,6 +111,17 @@ class YTKRequest: YTKBaseRequest {
             }
         }else {
             self.saveResponseDataToCacheFile(data: super.responseData)
+        }
+    }
+    
+    override func loadCache() {
+        if self.ignoreCache == false && self.loadCacheWithError(error: nil) == true{
+            DispatchQueue.main.async {
+                let strongSelf: YTKRequest = self
+                if let block = strongSelf.successCompletionBlock {
+                    block(strongSelf)
+                }
+            }
         }
     }
     
@@ -184,7 +189,8 @@ class YTKRequest: YTKBaseRequest {
                 ptr = NSError(domain: YTKRequestCacheErrorDomain, code: YTKRequestCacheErrorInvalidCacheData, userInfo: [NSLocalizedDescriptionKey: "Invalid cache data"])
             }
             return false
-        }else {
+        }
+        else {
             ChangeValue.changeResponseData(self.responseData()!, forRequest: self)
             ChangeValue.changeResponseString(self.responseString()!, forRequest: self)
             ChangeValue.changeResponseObject(self.responseObject()! as AnyObject, forRequest: self)
