@@ -1,5 +1,5 @@
 # ytk-swift
-### ytknetwork of swfit verion，Combined with Alarmofire usage，Implementing network requests
+### ytknetwork of swift verion，Combined with Alarmofire usage，Implementing network requests
 
 
 
